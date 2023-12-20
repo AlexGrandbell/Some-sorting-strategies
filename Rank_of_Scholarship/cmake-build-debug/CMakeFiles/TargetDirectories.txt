@@ -1,0 +1,3 @@
+/Users/shenjiarui/Desktop/Rank_of_Scholarship/cmake-build-debug/CMakeFiles/Rank_of_Scholarship.dir
+/Users/shenjiarui/Desktop/Rank_of_Scholarship/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/shenjiarui/Desktop/Rank_of_Scholarship/cmake-build-debug/CMakeFiles/rebuild_cache.dir
