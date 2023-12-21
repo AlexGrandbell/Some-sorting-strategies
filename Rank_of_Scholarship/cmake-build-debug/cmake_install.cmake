@@ -1,4 +1,4 @@
-# Install script for directory: /Users/shenjiarui/Desktop/Rank_of_Scholarship
+# Install script for directory: /Users/shenjiarui/Documents/我的文档/武汉理工大学/正在学/数据结构A/数据结构实验/实验源代码/实验四-查找和排序/Rank_of_Scholarship
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/shenjiarui/Desktop/Rank_of_Scholarship/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/shenjiarui/Documents/我的文档/武汉理工大学/正在学/数据结构A/数据结构实验/实验源代码/实验四-查找和排序/Rank_of_Scholarship/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

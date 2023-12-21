@@ -1,7 +1,11 @@
+//
+// Created by 沈嘉瑞 on 2023.12.19.
+//
+
 #include "Student.h"
 
 ostream& operator<<(ostream &out, const Student &s) {
-    return out<<"姓名:"<<left<<setw(8)<<s.name<<"学号:"<<left<<setw(8)<<s.number<<"语文:"<<left<<setw(4)<<s.chinese<<"数学:"<<left<<setw(4)<<s.math<<"英语:"<<left<<setw(4)<<s.english<<"总分:"<<left<<setw(5)<<s.sum;
+    return out<<"姓名:"<<left<<setw(10)<<s.name<<"学号:"<<left<<setw(8)<<s.number<<"语文:"<<left<<setw(4)<<s.chinese<<"数学:"<<left<<setw(4)<<s.math<<"英语:"<<left<<setw(4)<<s.english<<"总分:"<<left<<setw(5)<<s.sum;
 }
 
 bool Student::operator==(const Student & s) const {
@@ -88,4 +92,13 @@ void Student::setMath(int m) {
 void Student::setEnglish(int e) {
     english = e;
     calSum();
+}
+
+void Student::input(int i,int num) {
+    cout<<"请输入第"<<i<<"个元素的信息(姓名、学号、语文、数学、英语):";
+    setName(inputString());
+    setNumber(inputInt());
+    setChinese(inputInt());
+    setMath(inputInt());
+    setEnglish(inputInt());
 }

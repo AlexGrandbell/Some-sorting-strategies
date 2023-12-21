@@ -1,3 +1,7 @@
+//
+// Created by 沈嘉瑞 on 2023.11.02.
+//
+
 #ifndef FAMILY_TREE_TOOL_H
 #define FAMILY_TREE_TOOL_H
 #include <iostream>
@@ -29,5 +33,5 @@ int intNumberTest(string);
 void exitTest(string);
 int generateRandomInt(int,int);
 int getDigitCount(int);
-
+void progressBar(int,int);
 #endif //FAMILY_TREE_TOOL_H

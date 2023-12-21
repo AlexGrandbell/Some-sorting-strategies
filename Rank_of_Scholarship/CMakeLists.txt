@@ -7,7 +7,7 @@ add_executable(Rank_of_Scholarship main.cpp
         Tool.cpp
         Student.cpp
         Student.h
-        SortManager.h
+        SortManagement.h
         Menu.h
         Integer.cpp
         Integer.h

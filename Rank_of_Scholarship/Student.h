@@ -1,3 +1,7 @@
+//
+// Created by 沈嘉瑞 on 2023.12.19.
+//
+
 #ifndef RANK_OF_SCHOLARSHIP_STUDENT_H
 #define RANK_OF_SCHOLARSHIP_STUDENT_H
 
@@ -27,6 +31,8 @@ public:
     void setChinese(int );
     void setMath(int );
     void setEnglish(int );
+
+    void input(int ,int );
 
     //用于基数排序时的进制（桶）数
     int getRadix() {

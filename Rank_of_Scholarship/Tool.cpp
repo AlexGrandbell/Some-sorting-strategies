@@ -1,3 +1,7 @@
+//
+// Created by 沈嘉瑞 on 2023.11.02.
+//
+
 #include "Tool.h"
 
 double inputDouble(){
@@ -62,5 +66,42 @@ int getDigitCount(int number) {
 void exitTest(string s){
     if (s == "q"){
         throw myExpection("已手动退出进程。");
+    }
+}
+
+void progressBar(int i,int num){
+    if (i == num-1){
+        cout<<"\n";
+        cout.flush();
+    } else if (i == (int)(num * 0.9)){
+        cout<<"_";
+        cout.flush();
+    } else if (i == (int)(num * 0.8)){
+        cout<<"_";
+        cout.flush();
+    } else if (i == (int)(num * 0.7)){
+        cout<<"_";
+        cout.flush();
+    } else if (i == (int)(num * 0.6)){
+        cout<<"_";
+        cout.flush();
+    } else if (i == (int)(num * 0.5)){
+        cout<<"_";
+        cout.flush();
+    } else if (i == (int)(num * 0.4)){
+        cout<<"_";
+        cout.flush();
+    } else if (i == (int)(num * 0.3)){
+        cout<<"_";
+        cout.flush();
+    } else if (i == (int)(num * 0.2)){
+        cout<<"_";
+        cout.flush();
+    } else if (i == (int)(num * 0.1)){
+        cout<<"_";
+        cout.flush();
+    } else if (i == (int)(num * 0.05)){
+        cout<<"_";
+        cout.flush();
     }
 }

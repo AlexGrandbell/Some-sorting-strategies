@@ -1,14 +1,18 @@
+//
+// Created by 沈嘉瑞 on 2023.11.21.
+//
+
 #ifndef TEACHING_PLANNING_MENU_H
 #define TEACHING_PLANNING_MENU_H
 
-#include "SortManager.h"
+#include "SortManagement.h"
 #include "Student.h"
 #include "Integer.h"
 
 template<class T>
 class Menu {
 private:
-    SortManager<T> studentSortManager;
+    SortManagement<T> sortManagement;
 public:
     static_assert(is_base_of<Sortable, T>::value, "T必须继承自Sortable");
     void Welcome();
@@ -27,47 +31,26 @@ void Menu<T>::Welcome() {
 
 template<class T>
 void Menu<T>::DoMenu() {
-//    int num = 0;
-//    cout << "请输入学生人数:";
-//    num = inputInt();
-//    while (num < 5) {
-//        cout << "请输入5以上的人数以便排名:";
-//        num = inputInt();
-//    }
-//    cout<<"请逐个输入学生信息:"<<endl;
-//    for (int i = 0; i < num; ++i) {
-//        Student student;
-//        cout<<"请输入第"<<i+1<<"个学生的信息(姓名、学号、语文、数学、英语):";
-//        student.setName(inputString());
-//        student.setNumber(inputInt());
-//        student.setChinese(inputInt());
-//        student.setMath(inputInt());
-//        student.setEnglish(inputInt());
-//        studentSortManager.ts.push_back(student);
-//    }
-
-    for (int i = 0; i < 1000000; ++i) {
-        studentSortManager.ts.push_back(Integer(1,100000));
-    }
-
+    sortManagement.input();
     int nSelection = -1;//判断用户输入的数字选择对应的菜单
     //不断循环，执行操作
     do {
         //界面与输入
         cout<<"\n --------排序菜单--------"<<endl;
-        cout<<"1.直接插入排序"<<endl;
-        cout<<"2.希尔排序"<<endl;
-        cout<<"3.冒泡排序"<<endl;
-        cout<<"4.快速排序"<<endl;
-        cout<<"5.选择排序"<<endl;
-        cout<<"6.堆排序"<<endl;
-        cout<<"7.归并排序"<<endl;
-        cout<<"8.基数排序"<<endl;
-        cout<<"9.都来一遍比较时间"<<endl;
-        cout<<"0.退出当前程序"<<endl;
+        cout<<" 1.直接插入排序"<<endl;
+        cout<<" 2.希尔排序"<<endl;
+        cout<<" 3.冒泡排序"<<endl;
+        cout<<" 4.快速排序"<<endl;
+        cout<<" 5.简单选择排序"<<endl;
+        cout<<" 6.堆排序"<<endl;
+        cout<<" 7.归并排序"<<endl;
+        cout<<" 8.基数排序"<<endl;
+        cout<<" 9.都来一遍比较时间"<<endl;
+        cout<<" 10.更新数据"<<endl;
+        cout<<" 0.退出当前程序"<<endl;
         cout<<" -----------------------"<<endl;
         //输出提示选择编号
-        cout<<"请选择菜单项编号(0-9):";
+        cout<<"请选择菜单项编号(0-10):";
         fflush(stdin);//清除输入流缓存
         nSelection = -1;
         try {
@@ -80,49 +63,52 @@ void Menu<T>::DoMenu() {
                     return;
                 }
                 case 1: {
-                    show(studentSortManager.insertSort());
+                    show(sortManagement.insertSort());
                     break;
                 }
                 case 2: {
-                    show(studentSortManager.shellSort());
+                    show(sortManagement.shellSort());
                     break;
                 }
                 case 3:{
-                    show(studentSortManager.bubbleSort());
+                    show(sortManagement.bubbleSort());
                     break;
                 }
                 case 4:{
-                    show(studentSortManager.quickSort());
+                    show(sortManagement.quickSort());
                     break;
                 }
                 case 5:{
-                    show(studentSortManager.selectSort());
+                    show(sortManagement.selectSort());
                     break;
                 }
                 case 6:{
-                    show(studentSortManager.heapSort());
+                    show(sortManagement.heapSort());
                     break;
                 }
                 case 7:{
-                    show(studentSortManager.mergeSort());
+                    show(sortManagement.mergeSort());
                     break;
                 }
                 case 8:{
-                    show(studentSortManager.radixSort());
+                    show(sortManagement.radixSort());
                     break;
                 }
                 case 9:{
                     vector<double> times;
-                    studentSortManager.insertSort();
-                    studentSortManager.shellSort();
-                    studentSortManager.bubbleSort();
-                    studentSortManager.quickSort();
-                    studentSortManager.selectSort();
-                    studentSortManager.heapSort();
-                    studentSortManager.mergeSort();
-                    studentSortManager.radixSort();
+//                    sortManagement.insertSort();
+                    sortManagement.shellSort();
+//                    sortManagement.bubbleSort();
+                    sortManagement.quickSort();
+//                    sortManagement.selectSort();
+                    sortManagement.heapSort();
+                    sortManagement.mergeSort();
+                    sortManagement.radixSort();
                     break;
                 }
+                case 10:
+                    sortManagement.input();
+                    break;
                 default: {
                     cout<<"您输入的序号错误。";
                     break;
