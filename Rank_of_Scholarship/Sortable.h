@@ -1,3 +1,7 @@
+//
+// Created by 沈嘉瑞 on 2023.12.20.
+//
+
 #ifndef RANK_OF_SCHOLARSHIP_SORTABLE_H
 #define RANK_OF_SCHOLARSHIP_SORTABLE_H
 #include "Tool.h"

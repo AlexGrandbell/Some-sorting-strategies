@@ -1,3 +1,7 @@
+//
+// Created by 沈嘉瑞 on 2023.12.20.
+//
+
 #ifndef RANK_OF_SCHOLARSHIP_INTEGER_H
 #define RANK_OF_SCHOLARSHIP_INTEGER_H
 
@@ -18,6 +22,8 @@ public:
     bool operator<(const Integer &) const;
     bool operator>=(const Integer &) const;
     bool operator<=(const Integer &) const;
+
+    void input(int,int );
 
     //用于基数排序时的进制（桶）数
     int getRadix() {
